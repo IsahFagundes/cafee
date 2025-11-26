@@ -1,3 +1,4 @@
+/*Aqui começa a mecher dentro do site, em cima é o código do relatório*/
 @media print { 
     body * {
         visibility: hidden;
@@ -11,97 +12,164 @@
         top: 0;
         width: 100%;
     }
+
+    /*Aqui começa a mecher dentro do site, em cima é o código do relatório*/
 }
-body{
-    background-color: #B4C7A3;
-    color:#000000;
+
+/*Mechendo no estilo do body*/
+body {
+    margin: 0; 
+    padding: 0;
+    background-color: #4e5f51;
+    color: #f0da96;
 }
-header{
-    background-color: #A0C2D5 ;
-    height: 80px;
-    }
-    footer{
-    background-color: #F1EAE1;
-    height: 350px;
+
+/*Mechendo no estilo (Header e Footer)*/
+header {
+    text-align: center;
+    background-color: #2b2b2b3b;
+    width: auto;
+    height: auto;
 }
+
+footer {
+    background-color: #2b2b2b3b;
+    width: auto;
+    height: 150px;
+    position: relative;
+}
+.cabeca fieldset {
+    height: 1px;
+    transform: scaleY(0.4); /* Esse codigo reduz a altura usando Transform: scaleY(0.4) isso fará com que o elemento de 1px pareça ter 0.4px de altura.*/
+    background-color: #f0da96;
+}
+
+/* Estilo específico para o rodapé do site*/
+.pé {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+/*Cor dos textos*/
+h2 {      
+    color: #f7e6a9;
+}
+
+
+
+/* Estilos de Colunas e Textos (Layout Principal)*/
+
+.lado0 {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: flex-start; 
+}
+
+.texto0 {
+    width: 96%;
+    padding: 20px;
+    background-color: #2b2b2b3b;
+    border: 1px solid #000000;
+    border-radius: 8px;
+}
+
 .lado {
     display: flex; 
     justify-content: space-around; 
-    align-items:flex-start; 
-    gap: 20px; 
+    align-items: flex-start; 
 }
 
 .texto {
     width: 45%;
     padding: 25px;
-    background-color: #4d705b4b;
+    background-color: #2b2b2b3b;
     border: 1px solid #000000;
     border-radius: 8px;
-    
-}
-
-
-  /*Cor do texto*/
-h2 {      
-    color: #333;
 }
 
 .lado1 {
     display: flex; 
     justify-content: space-around; 
-    align-items:flex-start; 
-    gap: 20px; 
+    align-items: flex-start; 
 }
 
 .texto1 {
     width: 45%;
     padding: 25px;
-    background-color: #4d705b4b;
+    background-color: #2b2b2b3b;
     border: 1px solid #000000;
     border-radius: 8px;
-    
 }
 
-.texto2 {
-    width: 45%;
-    padding: 25px;
-    background-color: #4d705b4b;
-    border: 1px solid #000000;
-    border-radius: 8px;
-   
-}
 .lado2 {
     display: flex; 
     justify-content: space-around; 
-    align-items:flex-start; 
-    gap: 20px; 
+    align-items: flex-start; 
 }
 
 .texto2 {
     width: 45%;
     padding: 25px;
-    background-color: #4d705b4b;
+    background-color: #2b2b2b3b;
     border: 1px solid #000000;
     border-radius: 8px;
-   
+}
+
+/*Mechendo nas imagens*/
+.imagem-Logo {
+    width: 400px;
+    height: auto; 
+}
+.imagem-Final {
+    width: 150px;
+    height: auto;
 }
 
 
 
 
-.main-header {
-    /* Estilos para o cabeçalho principal, se necessário */
-    padding: 20px 0;    /*tamanho da img*/ 
-    background-color: #f4f4f4;
-    text-align: center; /* Centraliza a imagem se ela estiver em um elemento de bloco */
+
+
+
+
+
+
+
+.container {
+    display: flex; /* Define o container como um flex container */
+    justify-content: space-around; /* Distribui as caixas uniformemente com espaço entre elas */
+    gap: 20px; /* Adiciona espaço entre as caixas */
 }
 
-.logotipo img {
-    /* Define o tamanho da imagem do título/logo */
-    width: 200px; /* Ajuste a largura conforme necessário */
-    height: auto; /* Mantém a proporção original da imagem */
-    display: block; /* Garante que a imagem se comporte como um bloco para centralização */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+.caixa {
+    flex: 1; /* Permite que as caixas cresçam para preencher o espaço disponível */
+    padding: 20px; /* Espaçamento interno */
+    border: 1px solid #000000; /* Borda da caixa */
+}
+
+.container {
+    display: grid; /* Define o container como uma grade */
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de tamanhos iguais */
+    gap: 20px; /* Adiciona espaço entre as células da grade */
+}
+
+.caixa {
+    padding: 20px; /* Espaçamento interno */
+    border: 1px solid #000000; /* Borda da caixa */
+}
+
+.item-1 {
+    background-color: #2b2b2b3b; 
+}
+
+.item-2 {
+    background-color: #2b2b2b3b; /* Cor de fundo laranja */
+}
+
+.item-3 {
+    background-color: #2b2b2b3b; /* Cor de fundo verde */
 }
 
 

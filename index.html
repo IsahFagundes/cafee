@@ -4,200 +4,264 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Cat café.com.br</title>
 </head>
 <body>
-    
-
-    <header class="main-header">
-        <h1 class="logotipo">
-            <img src="img/titulo.jpg" alt="logotipo">
-        </h1>
+    <header>
+        <div class="cabeca">
+            <fieldset></fieldset>
+            <img src="Imagens/Logo.png" alt="Logo" class="imagem-Logo">
+            </h1>
+            <fieldset></fieldset>
+        </div>
     </header>
-
-    
-
-    <h1>𝓑𝓮𝓶 𝓥𝓲𝓷𝓭𝓸 𝓪𝓸 𝓒𝓪𝓽 𝓒𝓪𝓯𝓮́🐈‍⬛<h1>
-    <h4>──────────────────────────────────────────────────────⋆🐾°</h4>
-    <h4>𝓕𝓲𝓺𝓾𝓮 𝓪 𝓿𝓸𝓷𝓽𝓪𝓭𝓮 𝓹𝓪𝓻𝓪 𝓯𝓪𝔃𝓮𝓻 𝓸 𝓼𝓮𝓾 𝓹𝓮𝓭𝓲𝓭𝓸!</h4>
-    
-    <h1>𝓝𝓸𝓶𝓮 𝓭𝓸 𝓹𝓮𝓭𝓲𝓭𝓸:</h1>
-      <label>Nome que deseja ser chamado: <input type="text" id="nome" placeholder="(Ex: Ana, Isabelly, Lorenzo)"></label>
-      <br>
-      <label>Quantos desse pedido deseja: <input type="text" id="quantidade" min="1" placeholder="⚠Coloque no minímo 1⚠"></label>
-      <br>
-
-      <h1>𝓒𝓸𝓶𝓫𝓸𝓼 𝓹𝓻𝓸𝓷𝓽𝓸𝓼🥐:</h1>
-
-    <!-- Combos 1 e 2-->
-
-    <div class="lado">
-    <div class="texto">
-        <h2>╰┈➤ Combo simples🥯:</h2>
-        <p>│ Donut Açúcar e canela.<br>
-           │ Café comum. <br>
-           │ Xícara 100ml.<br>
-           │ Adicionais: açúcar cristal.<br> 
-        <h1>R$ 17.00 </h1></p>
-    <input type="checkbox" name="Combos simples" id="Combos_simples" value="17.00"> 
-    </div>
-    <div class="texto">
-        <h2>╰┈➤ Combo Vane🍫:</h2>
-        <p>│ Donut Red velvet. <br>
-           │ Café instantanêo. <br>
-           │ Copo 440ml. <br>
-           │ Adicionais: Chocolate amargo + Açúcar crista + Calda de chocolate. <br>
-        <h1>R$ 50.00 </h1></p>
-    <input type="checkbox" name="Combos vane" id="Combos_vane" value="50.00">
-    </div>
-    </div>
-    <br>    
-    <!-- Combos 3 e 4-->
+<main>
     <br>
-    <div class="lado1">
-    <div class="texto1">
-          <h2>╰┈➤ Combo Ray🍓:</h2>
-          <p>│ Donut Kinder bueno. <br>
-             │ Capuccino. <br>
-             │ Copo 300ml. <br>
-             │ Adicionais: Calda de morango + Leite integral. <br>
-          <h1>R$ 40.00 </h1></p>
-    <input type="checkbox" name="Combos Ray" id="Combos_ray" value="40.00"> 
-    </div>
-    <div class="texto">
-          <h2>╰┈➤ Combo Eckhardt🥮: </h2>
-          <p>│ Donut Cheesecake de frutas vermelhas. <br>
-             │ Café Mocha. <br>
-             │ Xicara 325ml. <br>
-             │ Adicionais: Chocolate ao leite. <br>
-          <h1>R$ 40.00 </h1></p>
-    <input type="checkbox" name="Combos Eckhardt" id="Combos_eckhardt" value="40.00">
-    </div>
-    </div>
     <br>
-    <!-- Combos 5 e 6-->
-    <br>
-    <div class="lado1">
-    <div class="texto1">
-          <h2>╰┈➤ Combo Pistache🌰:</h2>
-          <p>│ Donut de Pistache. <br>
-             │ Chá Verde. <br>
-             │ Copo 300ml. <br>
-             │ Adicionais: Chocolate de pistache + Calda de pistache + Leite integral. <br>
-          <h1>R$ 40.00 </h1></p>
-    <input type="checkbox" name="Combos Pistache" id="Combos_pistache" value="40.00"> 
+        <div class="lado0">
+        <div class="texto0">
+            <h2> Nome do cliente:</h2>
+            <input type="text" id="nome" placeholder="(Ex: Ana, Isabelli, Lorenzo)"></label>
+            <h2> Quantidade de pedidos:</h2>
+            <input type="text" id="quantidade" min="1" placeholder="⚠Coloque no minímo 1⚠"></label>
+        </div>          
+        </div>
+
+        <h1>  𝓒𝓸𝓶𝓫𝓸𝓼 𝓹𝓻𝓸𝓷𝓽𝓸𝓼🥐:</h1>
+
+        <!-- Combos 1 e 2-->
+        <div class="lado">
+            <div class="texto">
+                <h2>╰┈➤ Combo simples🥯:</h2>
+                <p>│ Donut Açúcar e canela.<br>
+                    │ Café comum. <br>
+                    │ Xícara 100ml.<br>
+                    │ Adicionais: açúcar cristal.<br> 
+                    <h1>R$ 17.00 </h1>
+                </p>
+                <input type="checkbox" name="Combos simples" id="Combos_simples" value="17.00"> 
+            </div>
+            <div class="texto">
+                <h2>╰┈➤ Combo Vane🍫:</h2>
+                <p>│ Donut Red velvet. <br>
+                    │ Café instantanêo. <br>
+                    │ Copo 440ml. <br>
+                    │ Adicionais: Chocolate amargo + Açúcar crista + Calda de chocolate. <br>
+                    <h1>R$ 50.00 </h1>
+                </p>
+                <input type="checkbox" name="Combos vane" id="Combos_vane" value="50.00">
+            </div>
+        </div>
+        <br>
+        <!-- Combos 3 e 4-->
+        <br>
+        <div class="lado1">
+            <div class="texto1">
+                <h2>╰┈➤ Combo Ray🍓:</h2>
+                <p>│ Donut Kinder bueno. <br>
+                    │ Capuccino. <br>
+                    │ Copo 300ml. <br>
+                    │ Adicionais: Calda de morango + Leite integral. <br>
+                    <h1>R$ 40.00 </h1>
+                </p>
+                <input type="checkbox" name="Combos Ray" id="Combos_ray" value="40.00"> 
+            </div>
+            <div class="texto">
+                <h2>╰┈➤ Combo Eckhardt🥮: </h2>
+                <p>│ Donut Cheesecake de frutas vermelhas. <br>
+                    │ Café Mocha. <br>
+                    │ Xicara 325ml. <br>
+                    │ Adicionais: Chocolate ao leite. <br>
+                    <h1>R$ 40.00 </h1>
+                </p>
+                <input type="checkbox" name="Combos Eckhardt" id="Combos_eckhardt" value="40.00">
+            </div>
+        </div>
+        <br>
+        <!-- Combos 5 e 6-->
+        <br>
+        <div class="lado1">
+            <div class="texto1">
+                <h2>╰┈➤ Combo Pistache🌰:</h2>
+                <p>│ Donut de Pistache. <br>
+                    │ Chá Verde. <br>
+                    │ Copo 300ml. <br>
+                    │ Adicionais: Chocolate de pistache + Calda de pistache + Leite integral. <br>
+                    <h1>R$ 40.00 </h1>
+                </p>
+                <input type="checkbox" name="Combos Pistache" id="Combos_pistache" value="40.00"> 
+            </div>
+            <div class="texto2">
+                <h2>╰┈➤ Combo Fagundes🥧: </h2>
+                <p>│ Donut creme de avelã. <br>
+                    │ Café expresso. <br>
+                    │ Xicara 250ml. <br>
+                    │ Adicionais: Calda de chocolate. <br>
+                    <h1>R$ 35.00 </h1>
+                </p>
+                <input type="checkbox" name="Combos Fagundes" id="Combos_fagundes" value="35.00">
+            </div>
+        </div>
+        <br>
+
+
+     
+        <h1>𝓜𝓸𝓷𝓽𝓮 𝓼𝓮𝓾 𝓹𝓮𝓭𝓲𝓭𝓸 𝓵𝓸𝓰𝓸 𝓪𝓫𝓪𝓲𝔁𝓸:</h1>   
+<div class="container">
+    <div class="caixa item-1">
+        <h2>Escolha seu tipo de café:</h2>
+        <select id="Cafe"></select> Escolha a temperatura da sua bebida:<select id="temperatura"></select>
     </div>
-    <div class="texto2">
-          <h2>╰┈➤ Combo Fagundes🥧: </h2>
-          <p>│ Donut creme de avelã. <br>
-             │ Café expresso. <br>
-             │ Xicara 250ml. <br>
-             │ Adicionais: Calda de chocolate. <br>
-          <h1>R$ 35.00 </h1></p>
-    <input type="checkbox" name="Combos Fagundes" id="Combos_fagundes" value="35.00">
+    <div class="caixa item-2">
+        <h2>Caixa 2</h2>
+        <p>Conteúdo da segunda caixa.</p>
     </div>
+    <div class="caixa item-3">
+        <h2>Caixa 3</h2>
+        <p>Conteúdo da terceira caixa.</p>
     </div>
-    
-    <h1>𝓜𝓸𝓷𝓽𝓮 𝓼𝓮𝓾 𝓹𝓮𝓭𝓲𝓭𝓸 𝓵𝓸𝓰𝓸 𝓪𝓫𝓪𝓲𝔁𝓸:</h1>
-
-   <h1>𝓒𝓪𝓯𝓮́𝓼☕:</h1>
-     <label> Escolha seu tipo de café:
-      <select id="Cafe"></select> Escolha a temperatura da sua bebida:<select id="temperatura"></select>
-     </label>
-    <br>
-
-   </select>
-
-   <br>
-
-    <h1>𝓒𝓱𝓪́𝓼🍵:</h1>
-    <label> Escolha seu tipo de chá:
-      <select id="Chas"></select>Escolha a temperatura da sua bebida:<select id="temperatura_cha"></select>
-     </label>
-    <br>
+</div>
 
 
-   <h1>𝓔𝓶 𝓺𝓾𝓮 𝓭𝓮𝓼𝓮𝓳𝓪 𝓼𝓮𝓻 𝓼𝓮𝓻𝓿𝓲𝓭𝓸🥛:</h1>
+        <!-- Cafe-->
+        <h1>𝓒𝓪𝓯𝓮́𝓼☕:</h1>
+        <label> Escolha seu tipo de café:
+            <select id="Cafe"></select> Escolha a temperatura da sua bebida:<select id="temperatura"></select>
+        </label>
+        <br>
+        <h1>𝓔𝓶 𝓺𝓾𝓮 𝓭𝓮𝓼𝓮𝓳𝓪 𝓼𝓮𝓻 𝓼𝓮𝓻𝓿𝓲𝓭𝓸🥛:</h1>
 
-    <label> Escolha seu tamanho de copo:
-      <select id="Copos"></select>
-     </label>
-    <br> 
+        <label> Escolha seu tamanho de copo:
+            <select id="Copos_cafe"></select>
+        </label>
+        <br> 
 
-    <label> Escolha seu tamanho de xícara
-      <select id="Xicaras"></select>
-     </label>
-    <br>
+        <label> Escolha seu tamanho de xícara
+            <select id="Xicaras_cafe"></select>
+        </label>
+        <br>
 
-   <h1>𝓞𝓹𝓲𝓬𝓲𝓸𝓷𝓪𝓲𝓼⭕:</h1>
-   
-    <label> Escolha se você gostaria de açúcar na sua bebida:
-      <select id="acucar"></select>
-     </label>
-    <br>
+        <h1>𝓞𝓹𝓲𝓬𝓲𝓸𝓷𝓪𝓲𝓼⭕:</h1>
+        
+        <label> Escolha se você gostaria de açúcar na sua bebida:
+            <select id="acucar_cafe"></select>
+        </label>
+        <br>
 
-   <label> Escolha se você gostaria de chocolate na sua bebida:
-    <select id="Chocolate"></select>
-   </label>
-  <br>
+        <label> Escolha se você gostaria de chocolate na sua bebida:
+            <select id="Chocolate_cafe"></select>
+        </label>
+        <br>
 
-   <label> Escolha se você gostaria de calda na sua bebida:
-    <select id="caldas"></select>
-   </label>
-  <br>
+        <label> Escolha se você gostaria de calda na sua bebida:
+            <select id="caldas_cafe"></select>
+        </label>
+        <br>
 
-   <label> Escolha se você gostaria de leite na sua bebida:
-    <select id="leites"></select>
-   </label>
-  <br>
-  
-  <h1>𝓒𝓸𝓶𝓲𝓭𝓪𝓼🍩:</h1>
-   <label> Escolha se você gostaria de alguma comida salgada: 
-    <select id="donuts_S"></select>
-   </label>
-  <br>
-   <label> Escolha se você gostaria de alguma comida doce:
-    <select id="donuts_D"></select>
-   </label>
-  <form>
-  <br>
-  <h1>𝓞𝓫𝓼𝓮𝓻𝓿𝓪𝓬̧𝓸̃𝓮𝓼⚠️:</h1>
-    <label>Se tiver alguma observação sobre sua bebida ou comida nos diga!</label>
-    <input id="observacoes" type="text" placeholder="(Ex: alergias, restições,etc...)">
-  <br>
-  <br>
-  <button onclick="limparCarrinho()">Limpar pedido</button>
+        <label> Escolha se você gostaria de leite na sua bebida:
+            <select id="leites_cafe"></select>
+        </label>
+        <br>
+        </select>
 
-  <br>
-  <h1>𝓕𝓸𝓻𝓶𝓪 𝓭𝓮 𝓹𝓪𝓰𝓪𝓶𝓮𝓷𝓽𝓸💸:</h1>
-  <br>
-  <label>
-  <input type="radio" name="forma_pagamento" value="Pix" >Pix
-  </label>
-  <label>
-  <input type="radio" name="forma_pagamento" value="Cartão de crédito">Cartão de crédito 
-  </label>
-  <label>
-  <input type="radio" name="forma_pagamento" value="Cartão de débito">Cartão de débito
-  </label>
-  <label>
-  <input type="radio" name="forma_pagamento" value="Dinheiro físico">Dinheiro físico
-  </label>
-  <label>
-  <input type="radio" name="forma_pagamento" value="Vale refeição">Vale de refeição
-  </label>
-  <br><br>
-  
-  <button type="button" onclick="gerarRelatorio()">Terminar pedido</button><br>
- 
+        <br>
+        <!-- Chas-->
+        <h1>𝓒𝓱𝓪́𝓼🍵:</h1>
+        <label> Escolha seu tipo de chá:
+            <select id="Chas"></select>Escolha a temperatura da sua bebida:<select id="temperatura_cha"></select>
+        </label>
+        <br>
 
-    </form>
-    
-  <div id="relatorio"></div>
-  <br>
-   <button onclick="window.print()">Gerar PDF do Relatório</button>
 
-   <script src="script.js"></script>
-   <link rel="stylesheet" href="style.css">
+        <h1>𝓔𝓶 𝓺𝓾𝓮 𝓭𝓮𝓼𝓮𝓳𝓪 𝓼𝓮𝓻 𝓼𝓮𝓻𝓿𝓲𝓭𝓸🥛:</h1>
+
+        <label> Escolha seu tamanho de copo:
+        <select id="Copos_cha"></select>
+        </label>
+        <br> 
+
+        <label> Escolha seu tamanho de xícara
+        <select id="Xicaras_cha"></select>
+        </label>
+        <br>
+
+        <h1>𝓞𝓹𝓲𝓬𝓲𝓸𝓷𝓪𝓲𝓼⭕:</h1>
+        
+        <label> Escolha se você gostaria de açúcar na sua bebida:
+        <select id="acucar_cha"></select>
+        </label>
+        <br>
+
+        <label> Escolha se você gostaria de chocolate na sua bebida:
+        <select id="Chocolate_cha"></select>
+        </label>
+        <br>
+
+        <label> Escolha se você gostaria de calda na sua bebida:
+        <select id="caldas_cha"></select>
+        </label>
+        <br>
+
+        <label> Escolha se você gostaria de leite na sua bebida:
+        <select id="leites_cha"></select>
+        </label>
+        <br>
+        
+        <h1>𝓒𝓸𝓶𝓲𝓭𝓪𝓼🍩:</h1>
+
+        <label> Escolha se você gostaria de alguma comida salgada: 
+        <select id="donuts_S"></select>
+        </label>
+        <br>
+
+        <label> Escolha se você gostaria de alguma comida doce:
+        <select id="donuts_D"></select>
+        </label>
+<form>
+            <br>
+            <h1>𝓞𝓫𝓼𝓮𝓻𝓿𝓪𝓬̧𝓸̃𝓮𝓼⚠️:</h1>
+            <label>Se tiver alguma observação sobre sua bebida ou comida nos diga!</label>
+            <input id="observacoes" type="text" placeholder="(Ex: alergias, restições,etc...)">
+            <br>
+            <br>
+            <button onclick="limparCarrinho()">Limpar pedido</button>
+
+            <br>
+            <h1>𝓕𝓸𝓻𝓶𝓪 𝓭𝓮 𝓹𝓪𝓰𝓪𝓶𝓮𝓷𝓽𝓸💸:</h1>
+            <br>
+            <label>
+                <input type="radio" name="forma_pagamento" value="Pix" >Pix
+            </label>
+            <label>
+                <input type="radio" name="forma_pagamento" value="Cartão de crédito">Cartão de crédito 
+            </label>
+            <label>
+                <input type="radio" name="forma_pagamento" value="Cartão de débito">Cartão de débito
+            </label>
+            <label>
+                <input type="radio" name="forma_pagamento" value="Dinheiro físico">Dinheiro físico
+            </label>
+            <label>
+                <input type="radio" name="forma_pagamento" value="Vale refeição">Vale de refeição
+            </label>
+            <br><br>
+            
+            <button type="button" onclick="gerarRelatorio()">Terminar pedido</button><br>
+        </form>
+            
+        <div id="relatorio"></div>
+        <br>
+        <button onclick="window.print()">Gerar PDF do Relatório</button>
+
+    </main>
+    <footer>
+        <div class="pé">
+            © 2025 | Todos os direitos reservados.
+            <img src="Imagens/Final.png" alt="Final" class="imagem-Final">
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
