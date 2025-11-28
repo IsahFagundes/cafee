@@ -463,3 +463,5 @@ function gerarRelatorio() {
 
   document.getElementById("relatorio").innerHTML = relatorioHTML;
 }
+
+

@@ -128,48 +128,106 @@ h2 {
 }
 
 
+.subtitulo-centralizado {
+  text-align: center;
+}
+.subtitulo-centralizado1 {
+  text-align: center;
+}
+.subtitulo-centralizado2 {
+  text-align: center;
+}
+.subtitulo-centralizado3 {
+  text-align: center;
+}
 
-
-
-
-
-
-
-
-
-.container {
-    display: flex; /* Define o container como um flex container */
-    justify-content: space-around; /* Distribui as caixas uniformemente com espaço entre elas */
-    gap: 20px; /* Adiciona espaço entre as caixas */
+.caixaa {
+    width: 1230px; 
+    height: 100px; 
+    background-color: #2b2b2b3b; 
+    color: #f7e6a9; 
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center; 
 }
 
 .caixa {
-    flex: 1; /* Permite que as caixas cresçam para preencher o espaço disponível */
+    flex: 1; /* deixa as caixas organizadas */
     padding: 20px; /* Espaçamento interno */
-    border: 1px solid #000000; /* Borda da caixa */
-}
-
-.container {
-    display: grid; /* Define o container como uma grade */
-    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de tamanhos iguais */
-    gap: 20px; /* Adiciona espaço entre as células da grade */
-}
-
-.caixa {
-    padding: 20px; /* Espaçamento interno */
-    border: 1px solid #000000; /* Borda da caixa */
+    border: 1px solid #000000; 
 }
 
 .item-1 {
     background-color: #2b2b2b3b; 
 }
-
 .item-2 {
-    background-color: #2b2b2b3b; /* Cor de fundo laranja */
+    background-color: #2b2b2b3b; 
 }
-
 .item-3 {
-    background-color: #2b2b2b3b; /* Cor de fundo verde */
+    background-color: #2b2b2b3b; 
+}
+.item-4 {
+    background-color: #2b2b2b3b; 
+}
+.item-5 {
+    background-color: #2b2b2b3b; 
+}
+.item-6 {
+    background-color: #2b2b2b3b; 
+}
+.item-7 {
+    background-color: #2b2b2b3b; 
+}
+.item-8 {
+    background-color: #2b2b2b3b; 
 }
 
 
+.container {
+    display: flex; 
+    justify-content: center;
+    gap: 20px; /* Adiciona espaço entre as caixas */
+    flex-wrap: wrap; /* Permite que as caixas quebrem para a próxima linha em telas menores */
+}
+
+.box {
+    width: 300px; 
+    background-color: #2b2b2b3b;
+    border: 1px solid #000000;
+    padding: 20px; 
+    margin: 10px; 
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*sombra*/
+    transition: transform 0.3s; /* efeito de hover */
+}
+
+.box:hover {
+    transform: translateY(-5px); /* Move a caixa ligeiramente para cima no hover */
+}
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    box-sizing: border-box; /*largura*/
+    
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e8d281;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+button:hover {
+    background-color: #eddb9a;
+}
