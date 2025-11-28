@@ -16,7 +16,6 @@
     /*Aqui começa a mecher dentro do site, em cima é o código do relatório*/
 }
 
-/*Mechendo no estilo do body*/
 body {
     margin: 0; 
     padding: 0;
@@ -24,7 +23,6 @@ body {
     color: #f0da96;
 }
 
-/*Mechendo no estilo (Header e Footer)*/
 header {
     text-align: center;
     background-color: #2b2b2b3b;
@@ -40,7 +38,7 @@ footer {
 }
 .cabeca fieldset {
     height: 1px;
-    transform: scaleY(0.4); /* Esse codigo reduz a altura usando Transform: scaleY(0.4) isso fará com que o elemento de 1px pareça ter 0.4px de altura.*/
+    transform: scaleY(0.4); 
     background-color: #f0da96;
 }
 
@@ -159,28 +157,36 @@ h2 {
 }
 
 .item-1 {
-    background-color: #2b2b2b3b; 
+    background-color: #2b2b2b3b;
+    border-radius: 15px;
 }
 .item-2 {
     background-color: #2b2b2b3b; 
+    border-radius: 15px;
 }
 .item-3 {
     background-color: #2b2b2b3b; 
+    border-radius: 15px;
 }
 .item-4 {
     background-color: #2b2b2b3b; 
+    border-radius: 15px;
 }
 .item-5 {
     background-color: #2b2b2b3b; 
+    border-radius: 15px;
 }
 .item-6 {
     background-color: #2b2b2b3b; 
+    border-radius: 15px;
 }
 .item-7 {
     background-color: #2b2b2b3b; 
+    border-radius: 15px;
 }
 .item-8 {
-    background-color: #2b2b2b3b; 
+    background-color: #2b2b2b3b;
+    border-radius: 15px;
 }
 
 
