@@ -16,6 +16,7 @@
     /*Aqui começa a mecher dentro do site, em cima é o código do relatório*/
 }
 
+/*Mechendo no estilo do body*/
 body {
     margin: 0; 
     padding: 0;
@@ -23,6 +24,7 @@ body {
     color: #f0da96;
 }
 
+/*Mechendo no estilo (Header e Footer)*/
 header {
     text-align: center;
     background-color: #2b2b2b3b;
@@ -35,11 +37,6 @@ footer {
     width: auto;
     height: 150px;
     position: relative;
-}
-.cabeca fieldset {
-    height: 1px;
-    transform: scaleY(0.4); 
-    background-color: #f0da96;
 }
 
 /* Estilo específico para o rodapé do site*/
@@ -55,24 +52,7 @@ h2 {
     color: #f7e6a9;
 }
 
-
-
 /* Estilos de Colunas e Textos (Layout Principal)*/
-
-.lado0 {
-    display: flex; 
-    justify-content: space-around; 
-    align-items: flex-start; 
-}
-
-.texto0 {
-    width: 96%;
-    padding: 20px;
-    background-color: #2b2b2b3b;
-    border: 1px solid #000000;
-    border-radius: 8px;
-}
-
 .lado {
     display: flex; 
     justify-content: space-around; 
@@ -124,116 +104,7 @@ h2 {
     width: 150px;
     height: auto;
 }
-
-
-.subtitulo-centralizado {
-  text-align: center;
-}
-.subtitulo-centralizado1 {
-  text-align: center;
-}
-.subtitulo-centralizado2 {
-  text-align: center;
-}
-.subtitulo-centralizado3 {
-  text-align: center;
-}
-
-.caixaa {
-    width: 1230px; 
-    height: 100px; 
-    background-color: #2b2b2b3b; 
-    color: #f7e6a9; 
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center; 
-}
-
-.caixa {
-    flex: 1; /* deixa as caixas organizadas */
-    padding: 20px; /* Espaçamento interno */
-    border: 1px solid #000000; 
-}
-
-.item-1 {
-    background-color: #2b2b2b3b;
-    border-radius: 15px;
-}
-.item-2 {
-    background-color: #2b2b2b3b; 
-    border-radius: 15px;
-}
-.item-3 {
-    background-color: #2b2b2b3b; 
-    border-radius: 15px;
-}
-.item-4 {
-    background-color: #2b2b2b3b; 
-    border-radius: 15px;
-}
-.item-5 {
-    background-color: #2b2b2b3b; 
-    border-radius: 15px;
-}
-.item-6 {
-    background-color: #2b2b2b3b; 
-    border-radius: 15px;
-}
-.item-7 {
-    background-color: #2b2b2b3b; 
-    border-radius: 15px;
-}
-.item-8 {
-    background-color: #2b2b2b3b;
-    border-radius: 15px;
-}
-
-
-.container {
-    display: flex; 
-    justify-content: center;
-    gap: 20px; /* Adiciona espaço entre as caixas */
-    flex-wrap: wrap; /* Permite que as caixas quebrem para a próxima linha em telas menores */
-}
-
-.box {
-    width: 300px; 
-    background-color: #2b2b2b3b;
-    border: 1px solid #000000;
-    padding: 20px; 
-    margin: 10px; 
-    border-radius: 8px; /* Cantos arredondados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*sombra*/
-    transition: transform 0.3s; /* efeito de hover */
-}
-
-.box:hover {
-    transform: translateY(-5px); /* Move a caixa ligeiramente para cima no hover */
-}
-
-
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #000000;
-    border-radius: 8px;
-    box-sizing: border-box; /*largura*/
-    
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #e8d281;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    
-}
-
-button:hover {
-    background-color: #eddb9a;
+.eu-png {
+    width: 30px;
+    height: 30px;
 }
