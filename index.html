@@ -22,9 +22,7 @@
     <div class="lado0">
         <div class="texto0">
             <h2>Nome do cliente:</h2>
-            <input type="text" id="nome" placeholder="(Ex: Ana, Isabelli, Lorenzo)">
-            <h2>Quantidade de pedidos:</h2>
-            <input type="text" id="quantidade" min="1" placeholder="⚠Coloque no minímo 1⚠">
+            <input type="text" id="nome" placeholder="(nome do usuário)">
         </div>          
     </div>
 
@@ -117,24 +115,6 @@
 
     <br>
 
-    <!-- Carrinho de Compras -->
-    <h1 class="subtitulo-centralizado">Carrinho</h1>
-    <table id="tabelaCarrinho">
-        <thead>
-            <tr>
-                <th>Item</th>
-                <th>Detalhes</th>
-                <th>Qtd.</th>
-                <th>Subtotal (R$)</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody id="corpoCarrinho"></tbody>
-    </table>
-    <h2>Total: R$ <span id="totalCarrinho">0.00</span></h2>
-    <br>
-    <button class="btn-limpar" onclick="limparCarrinho()">Limpar Carrinho</button>
-    <br><br><br>
 
     <!-- Café -->
     <h1 class="subtitulo-centralizado">Monte seu pedido logo abaixo:</h1> 
@@ -210,12 +190,32 @@
             <select id="donuts_D"></select>
         </div>
     </div>
-           
     <br>
-        <button type="button" onclick="adicionarPersonalizadoAoCarrinho()">Adicionar Pedido Personalizado ao Carrinho</button> 
-    <br><br>
-
-
+      <button type="button" onclick="adicionarPersonalizadoAoCarrinho()">Adicionar Pedido Personalizado ao Carrinho</button> 
+    <br>
+    
+    
+    <!-- Carrinho de Compras -->
+    <h1 class="subtitulo-centralizado">Carrinho</h1>
+    <table id="tabelaCarrinho">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Detalhes</th>
+                <th>Qtd.</th>
+                <th>Subtotal (R$)</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="corpoCarrinho"></tbody>
+    </table>
+    <h2>Total: R$ <span id="totalCarrinho">0.00</span></h2>
+    <div>
+        <button class="btn-limpar" onclick="limparCarrinho()">Limpar Carrinho</button>
+    </div>
+    <br>
+    <br>
+ 
     <!-- Observações -->
     <form>
         <h1 class="subtitulo-centralizado3">Observações:</h1>
@@ -240,7 +240,7 @@
 
        <br><br>
     </form> 
-    <button onclick="gerarRelatorio()">Terminar pedido</button><br>
+    <button onclick="gerarRelatorio()">Confirmar pedido</button><br>
 
     <div id="relatorio"></div>
     <br>

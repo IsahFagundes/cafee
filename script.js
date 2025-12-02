@@ -23,12 +23,14 @@ const Chas = [
 ];
 
 const temperatura = [
+ { id:"nenhum", nome:"nenhum", preco: 0 },  
  { id:"Quente", nome:"Quente", preco: 0 },
  { id:"Morno", nome:"Morno", preco: 0 },
  { id:"Gelado", nome:"Gelado", preco: 0 }
 ];
 
 const temperatura_cha = [
+ { id:"nenhum", nome:"nenhum", preco: 0 },   
  { id:"Quente", nome:"Quente", preco: 0 },
  { id:"Morno", nome:"Morno", preco: 0 },
  { id:"Gelado", nome:"Gelado", preco: 0 }
@@ -367,61 +369,123 @@ function adicionarAoCarrinho(nome, detalhes, preco) {
 }
 
 // NOVO: Função para adicionar o Pedido Personalizado
+
 function adicionarPersonalizadoAoCarrinho() {
-    const CafeId = document.getElementById("Cafe").value;
-    const ChasId = document.getElementById("Chas").value;
-    const temperaturaId = document.getElementById("temperatura").value; 
-    const temperatura_cha_Id = document.getElementById("temperatura_cha").value;
+    // === PEGANDO TODOS OS VALORES SELECIONADOS ===
+    const CafeId           = document.getElementById("Cafe").value;
+    const ChasId           = document.getElementById("Chas").value;
+    const temperaturaCafe  = document.getElementById("temperatura").value;
+    const temperaturaCha   = document.getElementById("temperatura_cha").value;
 
-    const Copos_cafeId     = document.getElementById("Copos_cafe").value;
-    const Xicaras_cafeId   = document.getElementById("Xicaras_cafe").value;
-    const Chocolate_cafeId = document.getElementById("Chocolate_cafe").value;
-    const acucar_cafeId    = document.getElementById("acucar_cafe").value;
-    const caldas_cafeId    = document.getElementById("caldas_cafe").value;
-    const leites_cafeId    = document.getElementById("leites_cafe").value;
+    const CoposCafeId      = document.getElementById("Copos_cafe").value;
+    const XicarasCafeId    = document.getElementById("Xicaras_cafe").value;
+    const ChocolateCafeId  = document.getElementById("Chocolate_cafe").value;
+    const AcucarCafeId     = document.getElementById("acucar_cafe").value;
+    const CaldaCafeId      = document.getElementById("caldas_cafe").value;
+    const LeiteCafeId      = document.getElementById("leites_cafe").value;
 
-    const Copos_chaId      = document.getElementById("Copos_cha").value;
-    const Xicaras_chaId    = document.getElementById("Xicaras_cha").value;
-    const Chocolate_chaId  = document.getElementById("Chocolate_cha").value;
-    const acucar_chaId     = document.getElementById("acucar_cha").value;
-    const caldas_chaId     = document.getElementById("caldas_cha").value;
-    const leites_chaId     = document.getElementById("leites_cha").value;
+    const CoposChaId       = document.getElementById("Copos_cha").value;
+    const XicarasChaId     = document.getElementById("Xicaras_cha").value;
+    const ChocolateChaId   = document.getElementById("Chocolate_cha").value;
+    const AcucarChaId      = document.getElementById("acucar_cha").value;
+    const CaldaChaId       = document.getElementById("caldas_cha").value;
+    const LeiteChaId       = document.getElementById("leites_cha").value;
 
-    const donuts_S_Id = document.getElementById("donuts_S").value;
-    const donuts_D_Id = document.getElementById("donuts_D").value;
+    const DonutSalgadoId   = document.getElementById("donuts_S").value;
+    const DonutDoceId      = document.getElementById("donuts_D").value;
 
-    const Cafe1          = procurarPorId(Cafe, CafeId) || { nome: "", preco: 0 };
-    const Chas1          = procurarPorId(Chas, ChasId) || { nome: "", preco: 0 };
-    const Copos1         = procurarPorId(Copos_cafe, Copos_cafeId) || { nome: "", preco: 0 };
-    const Xicaras1       = procurarPorId(Xicaras_cafe, Xicaras_cafeId) || { nome: "", preco: 0 };
-    const Chocolate1     = procurarPorId(Chocolate_cafe, Chocolate_cafeId) || { nome: "", preco: 0 };
-    const acucar1        = procurarPorId(acucar_cafe, acucar_cafeId) || { nome: "", preco: 0 };
-    const caldas1        = procurarPorId(caldas_cafe, caldas_cafeId) || { nome: "", preco: 0 };
-    const leites1        = procurarPorId(leites_cafe, leites_cafeId) || { nome: "", preco: 0 };
+    // === BUSCANDO OS OBJETOS CORRESPONDENTES ===
+    const cafe          = procurarPorId(Cafe, CafeId);
+    const cha           = procurarPorId(Chas, ChasId);
+    const copoCafe      = procurarPorId(Copos_cafe, CoposCafeId);
+    const xicaraCafe    = procurarPorId(Xicaras_cafe, XicarasCafeId);
+    const chocolateCafe = procurarPorId(Chocolate_cafe, ChocolateCafeId);
+    const acucarCafe    = procurarPorId(acucar_cafe, AcucarCafeId);
+    const caldaCafe     = procurarPorId(caldas_cafe, CaldaCafeId);
+    const leiteCafe     = procurarPorId(leites_cafe, LeiteCafeId);
 
-    const Copos2         = procurarPorId(Copos_cha, Copos_chaId) || { nome: "", preco: 0 };
-    const Xicaras2       = procurarPorId(Xicaras_cha, Xicaras_chaId) || { nome: "", preco: 0 };
-    const Chocolate2     = procurarPorId(Chocolate_cha, Chocolate_chaId) || { nome: "", preco: 0 };
-    const acucar2        = procurarPorId(acucar_cha, acucar_chaId) || { nome: "", preco: 0 };
-    const caldas2        = procurarPorId(caldas_cha, caldas_chaId) || { nome: "", preco: 0 };
-    const leites2        = procurarPorId(leites_cha, leites_chaId) || { nome: "", preco: 0 };
+    const copoCha       = procurarPorId(Copos_cha, CoposChaId);
+    const xicaraCha     = procurarPorId(Xicaras_cha, XicarasChaId);
+    const chocolateCha = procurarPorId(Chocolate_cha, ChocolateChaId);
+    const acucarCha     = procurarPorId(acucar_cha, AcucarChaId);
+    const caldaCha      = procurarPorId(caldas_cha, CaldaChaId);
+    const leiteCha      = procurarPorId(leites_cha, LeiteChaId);
 
-    const donuts_S1      = procurarPorId(donuts_S, donuts_S_Id) || { nome: "", preco: 0 };
-    const donuts_D1      = procurarPorId(donuts_D, donuts_D_Id) || { nome: "", preco: 0 };
-    const temperatura_cafe = procurarPorId(temperatura, temperaturaId) || { nome: "", preco: 0 };
-    const temperatura_cha_2 = procurarPorId(temperatura_cha, temperatura_cha_Id) || { nome: "", preco: 0 };
+    const donutSalgado  = procurarPorId(donuts_S, DonutSalgadoId);
+    const donutDoce     = procurarPorId(donuts_D, DonutDoceId);
 
- // Calcula o preço total do pedido personalizado
-    const precoTotal = 
-      Cafe1.preco + Chas1.preco + 
-      Copos1.preco + Xicaras1.preco + Chocolate1.preco + acucar1.preco + caldas1.preco + leites1.preco +
-      Copos2.preco + Xicaras2.preco + Chocolate2.preco + acucar2.preco + caldas2.preco + leites2.preco +
-      donuts_S1.preco + donuts_D1.preco;
+    const tempCafe      = temperaturaCafe !== "Nenhum" ? temperaturaCafe : "";
+    const tempCha       = temperaturaCha !== "Nenhum" ? temperaturaCha : "";
 
+    // === MONTANDO DETALHES SOMENTE COM ITENS SELECIONADOS ===
+    let partes = [];
+    let precoTotal = 0;
+
+    // Bebida principal
+    if (cafe && cafe.id !== "Nenhum") {
+        partes.push(`Café: ${cafe.nome}${tempCafe ? " (" + tempCafe + ")" : ""}`);
+        precoTotal += cafe.preco;
+    }
+    if (cha && cha.id !== "Nenhum") {
+        partes.push(`Chá: ${cha.nome}${tempCha ? " (" + tempCha + ")" : ""}`);
+        precoTotal += cha.preco;
+    }
+
+    // Donuts
+    if (donutSalgado && donutSalgado.id !== "Nenhum") {
+        partes.push(`Salgado: ${donutSalgado.nome}`);
+        precoTotal += donutSalgado.preco;
+    }
+    if (donutDoce && donutDoce.id !== "nenhum") {
+        partes.push(`Doce: ${donutDoce.nome}`);
+        precoTotal += donutDoce.preco;
+    }
+
+    // Adicionais (só adiciona se não for "Nenhum")
+    let adicionais = [];
+    if (copoCafe && copoCafe.id !== "Nenhum") { adicionais.push(copoCafe.nome); precoTotal += copoCafe.preco; }
+    if (xicaraCafe && xicaraCafe.id !== "Nenhum") { adicionais.push(xicaraCafe.nome); precoTotal += xicaraCafe.preco; }
+    if (chocolateCafe && chocolateCafe.id !== "Nenhum") { adicionais.push(chocolateCafe.nome); precoTotal += chocolateCafe.preco; }
+    if (acucarCafe && acucarCafe.id !== "Nenhum") { adicionais.push(acucarCafe.nome); precoTotal += acucarCafe.preco; }
+    if (caldaCafe && caldaCafe.id !== "Nenhum") { adicionais.push(caldaCafe.nome); precoTotal += caldaCafe.preco; }
+    if (leiteCafe && leiteCafe.id !== "Nenhum") { adicionais.push(leiteCafe.nome); precoTotal += leiteCafe.preco; }
+
+    if (copoCha && copoCha.id !== "Nenhum") { adicionais.push(copoCha.nome); precoTotal += copoCha.preco; }
+    if (xicaraCha && xicaraCha.id !== "Nenhum") { adicionais.push(xicaraCha.nome); precoTotal += xicaraCha.preco; }
+    if (chocolateCha && chocolateCha.id !== "Nenhum") { adicionais.push(chocolateCha.nome); precoTotal += chocolateCha.preco; }
+    if (acucarCha && acucarCha.id !== "Nenhum") { adicionais.push(acucarCha.nome); precoTotal += acucarCha.preco; }
+    if (caldaCha && caldaCha.id !== "Nenhum") { adicionais.push(caldaCha.nome); precoTotal += caldaCha.preco; }
+    if (leiteCha && leiteCha.id !== "Nenhum") { adicionais.push(leiteCha.nome); precoTotal += leiteCha.preco; }
+
+    if (adicionais.length > 0) {
+        partes.push("Adicionais: " + adicionais.join(", "));
+    }
+
+    // Se não escolheu nada → avisa
     if (precoTotal === 0) {
-        alert("Selecione pelo menos um item (Café, Chá ou Donut) para adicionar ao carrinho.");
+        alert("Selecione pelo menos um item para adicionar ao carrinho!");
         return;
     }
+
+    // Detalhes finais (separados por | apenas se tiver mais de um)
+    const detalhesFinais = partes.join(" | ");
+
+    // Adiciona ao carrinho
+    carrinho.push({
+        nome: "Pedido Personalizado",
+        detalhes: detalhesFinais,
+        preco: precoTotal,
+        qtd: 1,
+        subtotal: precoTotal
+    });
+
+    atualizarCarrinho();
+
+    // Opcional: limpar os selects depois de adicionar
+    document.querySelectorAll("select").forEach(s => s.selectedIndex = 0);
+}
+
+{
 
     // Monta os detalhes para exibição no carrinho
     let detalhes = [];
@@ -519,49 +583,82 @@ function limparCarrinho() {
 
 function gerarRelatorio() {
     if (carrinho.length === 0) {
-       alert("O carrinho está vazio! Adicione itens antes de finalizar o pedido.");
-   return;
-   }
-
-    const nome = document.getElementById("nome").value || "Cliente";
-    const observacoes = document.getElementById("observacoes").value.trim();
-
-// Arrumando a forma de pagamento
-    let forma_pagamentoId = "Nenhuma forma de pagamento selecionada";
-    const formasPagamento = document.getElementsByName("forma_pagamento");
-    for (let i = 0; i < formasPagamento.length; i++) {
-    if (formasPagamento[i].checked) {
-    forma_pagamentoId = formasPagamento[i].value;
-          break;
-       }
+        alert("O carrinho está vazio! Adicione itens antes de finalizar o pedido.");
+        return;
     }
 
-    const observacaoFinal = observacoes == "" ? "Nenhuma observação" : observacoes;
+    const nome = document.getElementById("nome").value.trim() || "Cliente";
+    const observacoes = document.getElementById("observacoes").value.trim();
+
+    // Forma de pagamento
+    let forma_pagamento = "Não informado";
+    const formas = document.getElementsByName("forma_pagamento");
+    for (let i = 0; i < formas.length; i++) {
+        if (formas[i].checked) {
+            forma_pagamento = formas[i].value;
+            break;
+        }
+    }
+
     let totalGeral = 0;
-    let itensRelatorioHTML = "";
-   
-// Monta a lista de itens do relatório a partir do array carrinho
-        carrinho.forEach(item => {
+    let itensHTML = "";
+
+    carrinho.forEach(item => {
         totalGeral += item.subtotal;
-        itensRelatorioHTML += `
-         <li>
-         <strong>${item.nome} (x${item.qtd}):</strong> ${item.detalhes} - R$ ${item.subtotal.toFixed(2)}
-         </li> `;
-});
 
+        // Se for combo, mostra nome + detalhes
+        // Se for personalizado, já vem bem formatado
+        itensHTML += `
+            <div class="item-pedido">
+                <div class="nome-qtd">
+                    <strong>${item.nome}</strong> × ${item.qtd}
+                </div>
+                <div class="detalhes">${item.detalhes}</div>
+                <div class="preco-direita">R$ ${item.subtotal.toFixed(2)}</div>
+            </div>
+        `;
+    });
 
- // Relatório final (agora focado no array carrinho)
-     const relatorioHTML = `
-        <h2>Pedido Final</h2>
-        <p><strong>Nome do cliente:</strong> ${nome}</p>
-         
-         <ul>
-         ${itensRelatorioHTML}
-        </ul>
-         
-         <br>
-         <p><strong>Observações:</strong> ${observacaoFinal}</p>
-         <p><strong>Forma de pagamento:</strong> ${forma_pagamentoId}</p>
-         <h3><strong>Total a Pagar: R$ ${totalGeral.toFixed(2)}</strong></h3> `;
+    const dataAtual = new Date().toLocaleString('pt-BR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    });
+
+    const relatorioHTML = `
+        <div class="comprovante">
+            <div class="cabecalho-comprovante">
+                <h1> Cat Café</h1>
+                <p>✿ Av. Alecrim Dourado do Campo, 280<br>Foz do Iguaçu - PR | (45) 7325-8983</p>
+                <hr>
+                <p class="data-pedido">Data do pedido: ${dataAtual}</p>
+            </div>
+
+            <div class="info-cliente">
+                <h3> • Dados do Cliente</h3>
+                <p><strong>Cliente:</strong> ${nome}</p>
+                ${forma_pagamento !== "Não informado" ? `<p><strong>Pagamento:</strong> ${forma_pagamento}</p>` : ""}
+                ${observacoes ? `<p><strong>Observações:</strong> ${observacoes}</p>` : ""}
+            </div>
+
+            <div class="itens-comprovante">
+                <h3> • Itens do Pedido</h3>
+                ${itensHTML}
+                <div class="total-final">
+                <br>
+                    <strong>Total a pagar:</strong>
+                    <span class="valor-total">R$ ${totalGeral.toFixed(2)}</span>
+                </div>
+            </div>
+
+            <div class="rodape-comprovante">
+                <p>Obrigado pela preferência! <br>
+                Volte sempre ao Cat Café! </p>
+            </div>
+        </div>
+    `;
+
     document.getElementById("relatorio").innerHTML = relatorioHTML;
 }

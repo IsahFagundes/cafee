@@ -290,9 +290,18 @@ button:hover {
     cursor: pointer;
 }
 
+
 .btn-limpar {
-    background-color: #e8d281;
+          
+    width: 200px; 
+    display: block; 
+    margin: 15px auto; 
+    border-radius: 20px; 
+    padding: 10px 20px;
+    background-color: #d52f2361;
     color: white;
-    padding: 12px;
-    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
 }
